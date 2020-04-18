@@ -4,48 +4,59 @@
 
 <div style="align-content: center; background-color: white;">
     <div style="width: 50%; margin: 0 auto;">
-            <table class="table">
-                <tr>
-                    <td>
-                        Banco
-                    </td>
-                    <td>
-                        Itaú
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Código do banco
-                    </td>
-                    <td class="codigo">
-                        <input type="text" value="341" readonly id="valorCodigo">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Agência
-                    </td>
-                    <td class="agencia">
-                        <input type="text" value="4448" readonly id="valorAgencia">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Conta corrente
-                    </td>
-                    <td class="conta">
-                        <input type="text" value="31598-8" readonly id="valorConta">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        CNPJ
-                    </td>
-                    <td class="CNPJ">
-                        <input type="text" value="07732067/0001-60" readonly id="valorCNPJ">
-                    </td>
-                </tr>
-            </table>
+            <div style="width: 50%; margin: 0 auto;">
+                <img   src="./logo.png" />
+            </div>
+          
+           <div style="border-radius: 20px; height: 100px; background-color: #00b4b2; align-content: center;" class="row">
+                <div class="col" style="font-size: 23px; text-align: center; color:white; font-weight: bold;">
+                    IGREJA PRESBITERIANA CELULAR DE CRISTO
+                </div>
+           </div>
+           <div style="margin-top: 10px; border-radius: 20px; height: 100px; background-color: #00b4b2; align-content: center;" class="row">
+                <div class="col" style="font-size: 23px; text-align: center; color:white; font-weight: bold;">
+                    Banco
+                </div>
+                <div class="col" style="font-size: 23px; text-align: center; color:white; font-weight: bold;">
+                    Itaú
+                </div>
+           </div>
+           <div style="height: 100px; margin-top: 10px; background-color: #00b4b2; align-content: center; border-radius: 20px;" class="row codigo">
+                <div class="col" style="font-size: 23; text-align: center; color:white; font-weight: bold;">
+                    Código do banco
+                </div>
+                <div class="col" style="text-align: center; color:white;">
+                    <input type="hidden" value="341" readonly id="valorCodigo">
+                    <span style="font-weight: bold; font-size: 23;" class="codigo">341</span>
+                </div>
+           </div>
+           <div style="height: 100px; margin-top: 10px; background-color: #00b4b2; align-content: center; border-radius: 20px;" class="row agencia">
+                <div class="col" style="font-size: 23; text-align: center; color:white; font-weight: bold;">
+                    Agência
+                </div>
+                <div class="col" style="text-align: center; color:white;">
+                    <input type="hidden" value="4448" readonly id="valorAgencia">
+                    <span style="font-weight: bold; font-size: 23;" class="codigo">4448</span>
+                </div>
+           </div>
+           <div style="height: 100px; margin-top: 10px; background-color: #00b4b2; align-content: center; border-radius: 20px;" class="row conta">
+                <div class="col" style="font-size: 23; text-align: center; color:white; font-weight: bold;">
+                    Conta corrente
+                </div>
+                <div class="col" style="text-align: center; color:white;">
+                    <input type="hidden" value="31598-8" readonly id="valorConta">
+                    <span style="font-weight: bold; font-size: 23;" class="codigo">31598-8</span>
+                </div>
+           </div>
+           <div style="height: 100px; margin-top: 10px; background-color: #00b4b2; align-content: center; border-radius: 20px;" class="row CNPJ">
+                <div class="col" style="font-size: 23; text-align: center; color:white; font-weight: bold;">
+                    CNJP
+                </div>
+                <div class="col" style="text-align: center; color:white;">
+                    <input type="hidden" value="07732067/0001-60" readonly id="valorCNPJ">
+                    <span style="font-weight: bold; font-size: 23;" class="codigo">07732067/0001-60</span>
+                </div>
+           </div>
 
     </div>
 
@@ -60,7 +71,7 @@
             codigo.select()
             try {
                 var successful = document.execCommand('copy');
-                alert("copiado!")
+                alert(codigo.value + " copiado!")
             } catch (err) {
                 console.log('Oops, unable to copy');
             }
