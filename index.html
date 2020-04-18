@@ -1,1 +1,77 @@
-asdfasdf
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div style="align-content: center; background-color: white;">
+    <div style="width: 50%; margin: 0 auto;">
+        <div style="width: 50%; margin: 0 auto;">
+            <table class="table">
+                <tr>
+                    <td>
+                        Banco
+                    </td>
+                    <td>
+                        Itaú
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Código do banco
+                    </td>
+                    <td class="codigo">
+                        <input type="text" value="341" readonly id="valorCodigo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Agência
+                    </td>
+                    <td class="agencia">
+                        <input type="text" value="4448" readonly id="valorAgencia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Conta corrente
+                    </td>
+                    <td class="conta">
+                        <input type="text" value="31598-8" readonly id="valorConta">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CNPJ
+                    </td>
+                    <td class="CNPJ">
+                        <input type="text" value="07732067/0001-60" readonly id="valorCNPJ">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    function copiar(classeCopy, classeValue) {
+        var copyCodigo = document.querySelector(classeCopy);
+        copyCodigo.addEventListener('click', function (event) {
+            var codigo = document.getElementById(classeValue)
+            codigo.select()
+            try {
+                var successful = document.execCommand('copy');
+                alert("copiado!")
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+        });
+    }
+
+    copiar(".codigo", "valorCodigo")
+    copiar(".agencia", "valorAgencia")
+    copiar(".conta", "valorConta")
+    copiar(".CNPJ", "valorCNPJ")
+
+</script>
